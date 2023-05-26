@@ -1,0 +1,69 @@
+{
+  "stackName": "amplify-smartangklungweb-dev-115909",
+  "props": {
+    "templateFile": "root-stack-template.json",
+    "parameters": {
+      "AuthRoleName": "amplify-smartangklungweb-dev-115909-authRole",
+      "UnauthRoleName": "amplify-smartangklungweb-dev-115909-unauthRole",
+      "DeploymentBucketName": "amplify-smartangklungweb-dev-115909-deployment"
+    },
+    "preserveLogicalIds": true,
+    "loadNestedStacks": {
+      "authsmartangklungwebf43ec700": {
+        "templateFile": "auth\\smartangklungwebf43ec700\\smartangklungwebf43ec700-cloudformation-template.yml",
+        "parameters": {
+          "identityPoolName": "smartangklungwebf43ec700_identitypool_f43ec700",
+          "allowUnauthenticatedIdentities": false,
+          "resourceNameTruncated": "smartaf43ec700",
+          "userPoolName": "smartangklungwebf43ec700_userpool_f43ec700",
+          "autoVerifiedAttributes": [
+            "email"
+          ],
+          "mfaConfiguration": "OFF",
+          "mfaTypes": [
+            "SMS Text Message"
+          ],
+          "smsAuthenticationMessage": "Your authentication code is {####}",
+          "smsVerificationMessage": "Your verification code is {####}",
+          "emailVerificationSubject": "Your verification code",
+          "emailVerificationMessage": "Your verification code is {####}",
+          "defaultPasswordPolicy": false,
+          "passwordPolicyMinLength": 8,
+          "passwordPolicyCharacters": [],
+          "requiredAttributes": [
+            "email"
+          ],
+          "userpoolClientGenerateSecret": false,
+          "userpoolClientRefreshTokenValidity": 30,
+          "userpoolClientWriteAttributes": [
+            "email"
+          ],
+          "userpoolClientReadAttributes": [
+            "email"
+          ],
+          "userpoolClientLambdaRole": "smartaf43ec700_userpoolclient_lambda_role",
+          "userpoolClientSetAttributes": false,
+          "sharedId": "f43ec700",
+          "resourceName": "smartangklungwebf43ec700",
+          "authSelections": "identityPoolAndUserPool",
+          "useDefault": "default",
+          "userPoolGroupList": [],
+          "serviceName": "Cognito",
+          "usernameCaseSensitive": false,
+          "dependsOn": [],
+          "env": "dev"
+        },
+        "preserveLogicalIds": true,
+        "loadNestedStacks": {}
+      },
+      "authuserPoolGroups": {
+        "templateFile": "auth\\userPoolGroups\\template.json",
+        "parameters": {
+          "env": "dev"
+        },
+        "preserveLogicalIds": true,
+        "loadNestedStacks": {}
+      }
+    }
+  }
+}

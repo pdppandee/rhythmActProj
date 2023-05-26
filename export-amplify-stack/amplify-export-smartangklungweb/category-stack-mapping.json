@@ -1,0 +1,12 @@
+[
+  {
+    "category": "auth",
+    "resourceName": "smartangklungwebf43ec700",
+    "service": "Cognito"
+  },
+  {
+    "category": "auth",
+    "resourceName": "userPoolGroups",
+    "service": "Cognito-UserPool-Groups"
+  }
+]
