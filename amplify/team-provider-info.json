@@ -18,5 +18,43 @@
         "userPoolGroups": {}
       }
     }
+  },
+  "devdev": {
+    "awscloudformation": {
+      "AuthRoleName": "amplify-smartangklungweb-devdev-160414-authRole",
+      "UnauthRoleArn": "arn:aws:iam::970130657832:role/amplify-smartangklungweb-devdev-160414-unauthRole",
+      "AuthRoleArn": "arn:aws:iam::970130657832:role/amplify-smartangklungweb-devdev-160414-authRole",
+      "Region": "ap-southeast-1",
+      "DeploymentBucketName": "amplify-smartangklungweb-devdev-160414-deployment",
+      "UnauthRoleName": "amplify-smartangklungweb-devdev-160414-unauthRole",
+      "StackName": "amplify-smartangklungweb-devdev-160414",
+      "StackId": "arn:aws:cloudformation:ap-southeast-1:970130657832:stack/amplify-smartangklungweb-devdev-160414/9f0f1320-fd36-11ed-b2ae-02a848659f60",
+      "AmplifyAppId": "dq0pqj19bk342"
+    },
+    "categories": {
+      "auth": {
+        "smartangklungwebf43ec700": {},
+        "userPoolGroups": {}
+      }
+    }
+  },
+  "newdev": {
+    "awscloudformation": {
+      "AuthRoleName": "amplify-smartangklungweb-newdev-221616-authRole",
+      "UnauthRoleArn": "arn:aws:iam::970130657832:role/amplify-smartangklungweb-newdev-221616-unauthRole",
+      "AuthRoleArn": "arn:aws:iam::970130657832:role/amplify-smartangklungweb-newdev-221616-authRole",
+      "Region": "ap-southeast-1",
+      "DeploymentBucketName": "amplify-smartangklungweb-newdev-221616-deployment",
+      "UnauthRoleName": "amplify-smartangklungweb-newdev-221616-unauthRole",
+      "StackName": "amplify-smartangklungweb-newdev-221616",
+      "StackId": "arn:aws:cloudformation:ap-southeast-1:970130657832:stack/amplify-smartangklungweb-newdev-221616/95616b30-0221-11ee-8401-0aaf9a3c14b8",
+      "AmplifyAppId": "dq0pqj19bk342"
+    },
+    "categories": {
+      "auth": {
+        "smartangklungwebf43ec700": {},
+        "userPoolGroups": {}
+      }
+    }
   }
 }
