@@ -54,6 +54,9 @@
       "auth": {
         "smartangklungwebf43ec700": {},
         "userPoolGroups": {}
+      },
+      "api": {
+        "smartangklungweb": {}
       }
     }
   }

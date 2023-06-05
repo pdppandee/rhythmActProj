@@ -1,5 +1,5 @@
 <template>
-  <amplify-authenticator>
+  <!-- <amplify-authenticator> -->
   <v-app>
     <v-flex
       v-if="error"
@@ -25,8 +25,8 @@
       <router-view />
     </keep-alive>
   </v-app>
-  <amplify-sign-out></amplify-sign-out>
-  </amplify-authenticator>
+  <!-- <amplify-sign-out></amplify-sign-out>
+  </amplify-authenticator> -->
 </template>
 
 <script>

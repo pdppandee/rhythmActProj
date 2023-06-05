@@ -1,0 +1,8 @@
+type Account @model {
+  id: ID!
+  name: String!
+  pin: String!
+  createdAt: AWSDateTime
+  updatedAt: AWSDateTime
+  description: String
+}

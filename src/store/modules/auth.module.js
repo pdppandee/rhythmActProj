@@ -1,8 +1,9 @@
 import { CHECK_AUTH, FETCH_ACCOUNT_LIST, LOGIN, LOGOUT, ERROR } from "../actions.type";
 import { SET_AUTH, PURGE_AUTH } from "../mutations.type";
 // import { auth } from "@/firebase";
-import { db } from "@/firebase";
-import { Auth } from "aws-amplify";
+// import { db } from "@/firebase";
+import { API, Auth, graphqlOperation } from "aws-amplify";
+import { listAccounts } from "@/graphql/queries";
 
 async function cognitoSignIn(dispatch) {
   let credentials = null;
@@ -42,11 +43,16 @@ const getters = {
 const actions = {
   // eslint-disable-next-line no-unused-vars
   async [FETCH_ACCOUNT_LIST]() {
-    const querySnapshot = await db.collection("accounts").get();
-    const accounts = [];
-    querySnapshot.forEach((doc) => {
-      accounts.push(doc.data());
-    });
+    // const querySnapshot = await db.collection("accounts").get();
+    // const accounts = [];
+    // querySnapshot.forEach((doc) => {
+    //   accounts.push(doc.data());
+    // });
+    /* jirakit code start here */
+    const accountData = await API.graphql(graphqlOperation(listAccounts));
+    const accounts = accountData.data.listAccounts.items;
+    console.log(accounts)
+    /* jirakit code ended here */
     return accounts;
   },
   async [CHECK_AUTH]({ commit, dispatch, state }) {

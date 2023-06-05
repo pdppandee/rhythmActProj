@@ -171,6 +171,7 @@ export default {
         this.dismiss();
         this.$emit("onSaved");
       } catch (e) {
+        console.log(e);
         this.$store.dispatch(ERROR, `เกิดข้อผิดพลาด : ${e}`);
       } finally {
         this.hideLoading();

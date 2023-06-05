@@ -1,0 +1,35 @@
+type Account @model {
+  id: ID!
+  name: String!
+  pin: String!
+  createdAt: AWSDateTime
+  updatedAt: AWSDateTime
+  description: String
+  players: [Player] @hasMany(indexName: "byAccount", fields: ["id"])
+  devices: [Device] @hasMany(indexName: "byAccount", fields: ["id"])
+  logs: [Log] @hasMany(indexName: "byAccount", fields: ["id"])
+}
+
+type Player @model {
+  id: ID!
+  accountID: ID! @index(name: "byAccount")
+  name: String!
+  imageUrl: String
+  createdAt: AWSDateTime
+  updatedAt: AWSDateTime
+}
+
+type Device @model {
+  id: ID!
+  accountID: ID! @index(name: "byAccount")
+  name: String
+  note: String
+  number: Int
+}
+
+type Log @model {
+  id: ID!
+  level: String!
+  accountID: ID! @index(name: "byAccount")
+  score: Int
+}
